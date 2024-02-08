@@ -1,0 +1,50 @@
+{% extends "header.html" %}
+
+{% block home_body %}
+<ul class="tab">
+    <li class="tab__item active">
+      <a href="/" class="tab_a">심볼정보</a>
+    </li>
+    <li class="tab__item">
+      <a href="#tab2"class="tab_a">Tab 2</a>
+    </li>
+    <li class="tab__item">
+      <a href="#tab3"class="tab_a">Tab 3</a>
+    </li>
+    <li class="tab__item">
+      <a href="#tab4"class="tab_a">Tab 4</a>
+    </li>
+  </ul>
+<div class="home_default">
+    <div class="search_bar">
+        <input type="text" id="serach_holder" placeholder="검색하실 캐릭터를 입력 후 엔터를 눌러주세요"><i class="fa-solid fa-magnifying-glass fa-beat" id="serach_icon"></i>
+    </div>
+</div>
+<div class="accordion">
+  <ul>
+    <li class="on">
+      <div class="title1"><span>요일 관련 유의사항</span><i class="fa-solid fa-angles-up" id="arrow1"></i></div>
+      <div class="desc">위 심볼계산기는 전 일을 기준으로 조회를 합니다. 따라서 심볼의 레벨업 이후 약간의 딜레이가 있을 수 있습니다.</div>
+    </li>
+    <li class="on">
+      <div class="title2"><span>접속 기기 관련 안내</span><i class="fa-solid fa-angles-up" id="arrow2"></i></div>
+      <div class="desc">현재 갤럭시 z플립, 폴드 아이폰 프로 12 등 개발 기준 해상도의 가로 크기가 400px미만인 모바일 기기에 한하여 약간의 가로 화면 잘림 현상이 있습니다. 이 점 유의 바랍니다.</div>
+    </li>
+    <li class="on">
+      <div class="title3"><span>문의 연락처</span><i class="fa-solid fa-angles-up" id="arrow3"></i></div>
+      <div class="desc">문의 연락은 아래 footer에 있는 이메일로 연락해주시면 감사하겠습니다.</div>
+    </li>
+  </ul>
+</div>
+<div class="job">
+  <span id="characterNameSpan"></span>
+  <span id="plus_arc"></span>
+  <span id="plus_aut"></span>
+</div>
+<div class="tab">
+  <button class="tab-button" data-type="all" id="all">전체</button>
+  <button class="tab-button" data-type="arc" id="arc">아케인</button>
+  <button class="tab-button" data-type="aut" id="act">어센틱</button>
+</div>
+<div class="row-cols-3-container"></div>
+{% endblock %}

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+*{
+    font-family: 'Gamja Flower', sans-serif;
+}
+@media screen and (min-width: 1000px) {
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(#e8e0ff, #c397c4ad, #002bff73);
+        padding: 8px 12px;
+        opacity: 0.8;
+        height: 10%;
+        width: 100%;
+    }
+.page_name {
+    text-align: center;
+    position: sticky;
+    left: 10%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(37 19 51);
+    background: #b89df38f;
+}
+.home_default{
+    opacity: 0.7;
+   width: 100%;
+    position: relative;
+    background-color: thistle;
+    height: auto;
+}
+#serach_holder{
+    width: 80%;
+    background-color: #b89df3;
+    position: relative;
+    opacity: 1.0;
+    font-size: medium;
+    font-weight: bold;
+    color: black;
+    height: 5vh;
+    margin: 10%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: beige;
+    padding: 8px 12px;
+}
+.footer_hr{
+    width:50%;
+    color: #b89df38f;
+}
+.footer_Instruction span{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 150;
+    margin: 5%;
+    color: #00000078;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: thistle;
+
+}
+.nav_bar_list li {
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-style: oblique;
+}
+.nav_bar_list {
+    width: 65%;
+    display: flex;
+    list-style: none;
+    padding-left: 5%;
+}
+.navbar_toggleBtn {
+    color:rgb(0, 0, 0);
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+}
+
+.nav_bar_list li:hover {
+    background-color: rgb(212, 212, 212);
+    border-radius: 4px;
+}
+#wrapper{
+    border-top: 1px solid;
+    min-height: 100%;
+    padding-bottom:135px;
+
+}
+.instagramBtn{
+    color:#007bff;
+    left:10%
+}
+.footer_div{
+    height: 135px;
+  position : relative;
+  transform : translateY(0%);
+  background: #d0e8ff;
+
+}
+.footer_icon a{
+    margin-left: 3%;
+    margin-top: 10%;
+}
+#go_nexon{
+    margin:5%;
+    color:black;
+}
+#go_nexon:hover{
+    background-color: rgb(212, 212, 212);
+    border-radius: 4px;
+}
+#serach_icon{
+    font-size: 1.5rem;
+    position: absolute;
+    right: 15%;
+    top: 60%;
+    cursor: pointer;
+    font-weight: bolder;
+    color: #401052;
+}
+.desc{
+    display:none;
+}
+    
+}
