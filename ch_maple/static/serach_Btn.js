@@ -4,7 +4,6 @@ import {make_atc_ard} from "./cal_symbol.js";
 document.addEventListener('DOMContentLoaded', function () {
     const search_btn = document.querySelector('#serach_holder');
     let ocid = "";
-    const main=document.querySelector(".main");
     const home_body=document.querySelector(".home_body");
     const tab_buttons = document.querySelectorAll('.tab-button');
     const arc_btn=document.querySelector('#arc');
@@ -90,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
             home_body.style.height='min-content';
             tab_buttons.forEach(button => {
                 button.style.display = 'block';
-              
             });
             notice.forEach(button=>{
                 button.style.display='none';

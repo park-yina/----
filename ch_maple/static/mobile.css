@@ -76,6 +76,7 @@
         display: flex;
     }
     .job{
+        display:none;
         text-align: center;
         font-size: larger;
         background-color:black;
@@ -222,6 +223,9 @@
         background: #ffffff;
         display: none;
         padding: 0.5rem;
+      }
+      #plus_arc{
+        margin-bottom: 3%;
       }
     
 }
