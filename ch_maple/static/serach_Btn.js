@@ -66,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             make_card(postResponse)
                         });
                         atc_btn.addEventListener('click',()=>{
+                            job[1].style.display='none';
+                            job[2].style.display='inline';
                             make_atc_ard(postResponse)
                         })
                     },

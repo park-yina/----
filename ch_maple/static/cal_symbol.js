@@ -92,8 +92,6 @@ export function make_atc_ard(response){
     const job=document.querySelectorAll('.job');
     let total = 0; // 총합 초기화
     let symbol = response["symbol"];
-    job[1].style.display='none';
-        job[2].style.display='inline';
     for (let i = 0; i < symbol.length; i++) {
         let title = symbol[i]["symbol_name"];
         if (title.indexOf("어센틱심볼") !== -1) {
