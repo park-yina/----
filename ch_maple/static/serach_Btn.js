@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const all_btn=document.querySelector('#all');
     const notice=document.querySelectorAll('.on');
     const atc_btn=document.querySelector('#act');
+    const job=document.querySelectorAll('.job');
     tab_buttons.forEach(button => {
       button.style.display = 'none';
     });
@@ -53,9 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     contentType: 'application/json',
                     data: JSON.stringify({ 'character_class': character_class, 'symbol': symbol }),
                     success: function(postResponse) {
+                        job[0].style.display='initial';
                         updateUI(postResponse);
                         make_card(postResponse);
                         arc_btn.addEventListener('click',()=>{
+                            job[1].style.display='inline';
+                            job[2].style.display='none';
                           make_arc_card(postResponse)
                         });
                         all_btn.addEventListener('click',()=>{

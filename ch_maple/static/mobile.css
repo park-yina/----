@@ -76,7 +76,8 @@
         display: flex;
     }
     .job{
-        display:none;
+        display: none;
+        padding: 3%;
         text-align: center;
         font-size: larger;
         background-color:black;

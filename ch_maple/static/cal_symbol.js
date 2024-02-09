@@ -40,13 +40,9 @@ export function make_card(response){
 };
 
 export function make_arc_card(response) {
-    const job=document.querySelectorAll('.job');
     let total = 0; // 총합 초기화
     $(".row-cols-3-container").empty();
     let symbol = response["symbol"];
-    for (let j = 0; j < job.length; j++) {
-        job[j].style.display = 'inline-grid'; // .job 클래스를 가진 모든 요소에 스타일 적용
-    }
     for (let i = 0; i < symbol.length; i++) {
         let title = symbol[i]["symbol_name"];
         if (title.indexOf("아케인심볼") !== -1) {
@@ -91,8 +87,13 @@ export function make_arc_card(response) {
 }
 
 export function make_atc_ard(response){
+    var aut_result=$(".home_body #plus_aut");
     $(".row-cols-3-container").empty();
+    const job=document.querySelectorAll('.job');
+    let total = 0; // 총합 초기화
     let symbol = response["symbol"];
+    job[1].style.display='none';
+        job[2].style.display='inline';
     for (let i = 0; i < symbol.length; i++) {
         let title = symbol[i]["symbol_name"];
         if (title.indexOf("어센틱심볼") !== -1) {
@@ -101,6 +102,7 @@ export function make_atc_ard(response){
             let arc = symbol[i]["symbol_force"];
             let require = symbol[i]["symbol_require_growth_count"];
             let img = symbol[i]["symbol_icon"];
+            total += parseInt(arc);
             if (lev == 20) {
                 let temp_html = `
                 <div class="card">
@@ -142,6 +144,7 @@ export function make_atc_ard(response){
                     $(".row-cols-3-container").append(temp_html);
              }
                 main.style.overflow = 'auto'
+                aut_result.text("aut 총합" + total);
             }
         }
     }
