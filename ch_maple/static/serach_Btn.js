@@ -1,6 +1,7 @@
-import { make_arc_card } from "./cal_symbol.js";
 import { make_card} from "./cal_symbol.js";
 import {make_atc_ard} from "./cal_symbol.js";
+import { make_arc_card } from "./cal_symbol.js";
+export let globalSymbol;
 document.addEventListener('DOMContentLoaded', function () {
     const search_btn = document.querySelector('#serach_holder');
     let ocid = "";
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function get_symbol(ocid) {
+   function get_symbol(ocid) {
         $.ajax({
             type: "GET",
             url: "/symbol_result",
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
             success: function(response) {
                 var character_class = response.character_class;
                 var symbol=response.symbol;
+                globalSymbol=symbol
                     $.ajax({
                     type: "POST",
                     url: "/symbol_char",
@@ -61,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             job[1].style.display='inline';
                             job[2].style.display='none';
                           make_arc_card(postResponse)
+                          
                         });
                         all_btn.addEventListener('click',()=>{
                             make_card(postResponse)
@@ -77,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             },
             error: function(error) {
-                console.error(error);
             }
         });
     }
@@ -99,6 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
             notice.forEach(button=>{
                 button.style.display='none';
             })
+            
+            
 
 
         } else {

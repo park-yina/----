@@ -14,8 +14,6 @@ class SearchChar:
     def test():
         maple_api = os.environ.get('maple_api')
         name = request.args.get('character_name', '')
-        print(name)
-
         headers = {"x-nxopen-api-key": maple_api}
         character_name = quote(name)
         url = f"https://open.api.nexon.com/maplestory/v1/id?character_name={character_name}"
@@ -41,8 +39,6 @@ class SearchChar:
         url = f"https://open.api.nexon.com/maplestory/v1/character/symbol-equipment?ocid={ocid}&date={date}"
         response = requests.get(url, headers=headers)
 
-        print(response.json())
-
         return jsonify(response.json())
 
     @staticmethod
@@ -51,9 +47,16 @@ class SearchChar:
         data = request.json
         character_class = data.get('character_class')
         symbol=data.get('symbol')
-        if character_class:
-            print(character_class)
-            return jsonify({'character_class':character_class,'symbol':symbol})
+        return jsonify({'character_class':character_class,'symbol':symbol})
+class cal_day:
+    @staticmethod
+    @app.route('/dailyquest',methods=['POST'])
+    def symbol_cal():
+        data=request.json
+        value=data.get('value')
+        symbol=data.get('symbol')
+        return jsonify({'value':value,'symbol':symbol})
+
 @app.route('/')
 def home():
     return render_template('footer.html')

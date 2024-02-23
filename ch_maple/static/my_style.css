@@ -29,16 +29,19 @@
         background-color: rgb(212, 212, 212);
         border-radius: 4px;
     }
-    .row-cols-3-container{
-        display: grid;
-        justify-content: center;
+    .row-cols-3-container {
+        margin: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
+    
+    
     .card-img-top{
         width: min-content;
     }
     .card{
-        width: 100%;
-        margin: 3%;
+        margin: 1%;
         text-align: center;
         position: relative;
         display: -ms-flexbox;
@@ -49,7 +52,9 @@
         background-clip: border-box;
         border: 2px solid rgb(232 0 204);
         border-radius: 0.25rem;
-    }
+        width: calc(50% - 3rem);
+        box-sizing: border-box;
+        }
     .navbar__logo{
         margin-left: 3%;
         font-size: 2rem;
@@ -57,10 +62,7 @@
     .accordion-button{
         margin: 3%;
     }
-    .home_default{
-        max-height: auto;
-        min-width: 80%;
-    }
+
     .main{
             overflow:auto;
             display: grid;
@@ -75,10 +77,13 @@
         background-color: rgb(224, 255, 252);
         opacity: 1.0;
         height: 78vh;
-        width: 80%;
+        width: 100%;
         position: relative;
         border: #bba6ed solid 2px;
         padding-bottom: 150px;
+    }
+    .home_default{
+      overflow: hidden;
     }
     #serach_holder {
         margin-left: 3%;
@@ -116,7 +121,7 @@
             background: linear-gradient(#e8e0ff, #c397c4ad, #002bff73);
             padding: 8px 12px;
             opacity: 1.0;
-            width: 80%;
+            width: 100%;
     }
     .page_name {
         text-align: center;
@@ -178,7 +183,7 @@
         left:10%
     }
     .footer_div{
-        width: 80%;
+        width: 100%;
         position: relative;
         transform: translateY(0%);
         background: #d0e8ff;
@@ -238,4 +243,31 @@
       #plus_arc{
         margin-bottom: 3%;
       } 
+      .form-control {
+        margin: 2%;
+        display: block;
+        width: 50%;
+        height: calc(1.5em + 0.75rem + 2px);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #c597ff;
+        border: 2px solid #31008c;
+        border-radius: 12px 12px 12px 12px;
     }
+    ::-webkit-scrollbar {
+      width: 1.5rem;  /* 세로축 스크롤바 폭 너비 */
+      height: 20px;  /* 가로축 스크롤바 폭 너비 */
+  }
+  ::-webkit-scrollbar-track {
+    background: whitesmoke; /* 스크롤바 뒷 배경 색상 */
+  }
+}
